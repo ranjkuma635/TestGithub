@@ -1,0 +1,10 @@
+		 <!-- TemplateBeginRepeat name="Component.Fields.list" -->
+				@@SetVariable("listindex","${GetFromItem(Field,"Metadata.callout.image")}")@@
+				@@SetVariable("heading","${GetFromItem(Field,"Metadata.callout.title")}")@@
+				@@SetVariable("altText","${GetFromItem(Field,"Metadata.callout.image.Metadata.altText")}")@@
+				<img  width="231" height="230" src="@@PublishBinary(GetVariable("listindex"))@@" alt="@@GetVariable("altText")@@">
+@@Get("Fields.banner[${TemplateRepeatIndex}].image.Metadata.altText")@@
+@@Get("Component.Fields.image.Metadata.altText")@@
+Component.Fields.image
+
+@@Get("Component.Fields.image[${TemplateRepeatIndex}].Metadata.altText")@@
